@@ -1,0 +1,84 @@
+<div class="product">
+  <div class="product__content">
+    <ul class="product__header">
+      <li class="product__item product__item--menu-icon">
+        <img
+        (click)="closeMenu()"
+          class="product__item__profile"
+          src="/assets/icons/icon-menu.svg"
+          alt="Menu icon"
+        />
+      </li>
+      <li class="product__item">
+        <img class="logo" src="/assets/icons/logo.svg" alt="Logo Sneakers" />
+      </li>
+
+      <div class="product__header--menu">
+        <li class="product__item">Collections</li>
+        <li class="product__item">Men</li>
+        <li class="product__item">Women</li>
+        <li class="product__item">About</li>
+        <li class="product__item">Contact</li>
+      </div>
+
+      <li class="product__item">
+        <img src="/assets/icons/icon-cart.svg" alt="Shopping cart" />
+      </li>
+      <li class="product__item">
+        <img src="/assets/images/image-avatar.png" alt="Shopping cart" />
+      </li>
+    </ul>
+
+    <ul class="product__menu" [class.product__menu--menu]="menuClose">
+      <li class="product__item product__item--close-icon">
+        <img (click)="closeMenu()" src="../../../assets/icons/icon-close.svg" alt="Close icon" />
+      </li>
+      <li class="product__item">Collections</li>
+      <li class="product__item">Men</li>
+      <li class="product__item">Women</li>
+      <li class="product__item">About</li>
+      <li class="product__item">Contact</li>
+    </ul>
+
+    <div class="product__menu__overlay" [class.product__menu__overlay--overlay]="menuClose" (click)="closeMenu()"></div>
+
+    <div class="product__images">
+      <div class="product__item">
+        <img src="/assets/images/image-product-1.jpg" alt="" />
+      </div>
+      <div class="product__item">
+        <img src="/assets/images/image-product-2.jpg" alt="" />
+      </div>
+      <div class="product__item">
+        <img src="/assets/images/image-product-3.jpg" alt="" />
+      </div>
+      <div class="product__item">
+        <img src="/assets/images/image-product-4.jpg" alt="" />
+      </div>
+      <div class="product__item">
+        <img src="/assets/images/image-product-5.jpg" alt="" />
+      </div>
+    </div>
+
+    <div class="product__detail">
+      <span>Sneaker Company</span>
+      <h1>Fall Limited Edition Sneakers</h1>
+      <p>
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they’ll withstand everything the
+        weather can offer.
+      </p>
+      <span class="product__detail__price--current">$125.00</span>
+      <span class="product__detail__discount">50%</span>
+      <p class="product__detail__price">$250.00</p>
+      <div class="product__detail__buy">
+        <div class="product__detail__buy__amount">
+          <button>-</button>
+          <span>0</span>
+          <button>+</button>
+        </div>
+        <button class="product__detail__buy__button">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
